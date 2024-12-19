@@ -36,6 +36,7 @@
             dataGridViewInfo_KMR = new DataGridView();
             openFileDialogTask_KMR = new OpenFileDialog();
             saveFileDialogTask_KMR = new SaveFileDialog();
+            buttonSave_KMR = new Button();
             panelTop_KMR.SuspendLayout();
             panelMid_KMR.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewInfo_KMR).BeginInit();
@@ -43,6 +44,7 @@
             // 
             // panelTop_KMR
             // 
+            panelTop_KMR.Controls.Add(buttonSave_KMR);
             panelTop_KMR.Controls.Add(buttonRedactor_KMR);
             panelTop_KMR.Controls.Add(buttonOpen_KMR);
             panelTop_KMR.Dock = DockStyle.Top;
@@ -100,6 +102,17 @@
             // 
             openFileDialogTask_KMR.FileName = "openFileDialog1";
             // 
+            // buttonSave_KMR
+            // 
+            buttonSave_KMR.BackColor = Color.White;
+            buttonSave_KMR.FlatStyle = FlatStyle.Flat;
+            buttonSave_KMR.Image = (Image)resources.GetObject("buttonSave_KMR.Image");
+            buttonSave_KMR.Location = new Point(124, 7);
+            buttonSave_KMR.Name = "buttonSave_KMR";
+            buttonSave_KMR.Size = new Size(50, 39);
+            buttonSave_KMR.TabIndex = 0;
+            buttonSave_KMR.UseVisualStyleBackColor = false;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -126,5 +139,6 @@
         private SaveFileDialog saveFileDialogTask_KMR;
         private Button buttonOpen_KMR;
         private Button buttonRedactor_KMR;
+        private Button buttonSave_KMR;
     }
 }

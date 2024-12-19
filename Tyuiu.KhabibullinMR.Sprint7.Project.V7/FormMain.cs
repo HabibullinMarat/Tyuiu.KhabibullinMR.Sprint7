@@ -49,7 +49,7 @@ namespace Tyuiu.KhabibullinMR.Sprint7.Project.V7
 
             for (int i = 0; i < columns; i++)
             {
-                dataGridViewInfo_KMR.Columns[i].Width = 25;
+                dataGridViewInfo_KMR.Columns[i].Width = 50;
             }
 
             for (int i = 0; i < rows; i++)

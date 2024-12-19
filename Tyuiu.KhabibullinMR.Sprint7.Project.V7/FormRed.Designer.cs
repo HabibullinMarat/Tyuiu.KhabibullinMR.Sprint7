@@ -78,7 +78,6 @@
             label3.Size = new Size(99, 15);
             label3.TabIndex = 0;
             label3.Text = "Общая площадь";
-            label3.Click += this.label3_Click;
             // 
             // label4
             // 
@@ -233,7 +232,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(459, 450);
+            ClientSize = new Size(822, 450);
             Controls.Add(textBox11);
             Controls.Add(textBox10);
             Controls.Add(textBox9);
