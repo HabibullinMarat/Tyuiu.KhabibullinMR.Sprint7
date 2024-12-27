@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -39,23 +40,27 @@
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
+            textBoxNumP_KMR = new TextBox();
+            dataServiceBindingSource_KMR = new BindingSource(components);
+            textBoxNumK_KMR = new TextBox();
+            textBoxTotalArea_KMR = new TextBox();
+            textBoxUsableArea_KMR = new TextBox();
+            textBoxNumberOfRooms_KMR = new TextBox();
+            textBoxSurname_KMR = new TextBox();
+            textBoxNumOfFamMem_KMR = new TextBox();
+            textBoxNumOfKids_KMR = new TextBox();
+            textBoxArreas_KMR = new TextBox();
+            textBoxNote_KMR = new TextBox();
+            buttonOK_KMR = new Button();
+            buttonCancel_KMR = new Button();
+            textBoxTimeReg_KMR = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataServiceBindingSource_KMR).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(35, 19);
+            label1.Location = new Point(12, 19);
             label1.Name = "label1";
             label1.Size = new Size(98, 15);
             label1.TabIndex = 0;
@@ -64,7 +69,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(35, 54);
+            label2.Location = new Point(12, 73);
             label2.Name = "label2";
             label2.Size = new Size(101, 15);
             label2.TabIndex = 0;
@@ -73,7 +78,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(35, 90);
+            label3.Location = new Point(14, 128);
             label3.Name = "label3";
             label3.Size = new Size(99, 15);
             label3.TabIndex = 0;
@@ -82,16 +87,16 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(35, 167);
+            label4.Location = new Point(16, 236);
             label4.Name = "label4";
-            label4.Size = new Size(115, 15);
+            label4.Size = new Size(89, 15);
             label4.TabIndex = 0;
-            label4.Text = "Количество комнат";
+            label4.Text = "Кол-во комнат";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(35, 129);
+            label5.Location = new Point(14, 183);
             label5.Name = "label5";
             label5.Size = new Size(113, 15);
             label5.TabIndex = 0;
@@ -100,7 +105,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(35, 248);
+            label6.Location = new Point(153, 19);
             label6.Name = "label6";
             label6.Size = new Size(89, 15);
             label6.TabIndex = 0;
@@ -109,34 +114,34 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(35, 208);
+            label7.Location = new Point(16, 293);
             label7.Name = "label7";
-            label7.Size = new Size(170, 15);
+            label7.Size = new Size(58, 15);
             label7.TabIndex = 0;
-            label7.Text = "Фамилия квартиросъемщика";
+            label7.Text = "Фамилия";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(35, 292);
+            label8.Location = new Point(153, 73);
             label8.Name = "label8";
-            label8.Size = new Size(152, 15);
+            label8.Size = new Size(126, 15);
             label8.TabIndex = 0;
-            label8.Text = "Количество членов семьи";
+            label8.Text = "Кол-во членов семьи";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(35, 334);
+            label9.Location = new Point(153, 128);
             label9.Name = "label9";
-            label9.Size = new Size(105, 15);
+            label9.Size = new Size(79, 15);
             label9.TabIndex = 0;
-            label9.Text = "Количество детей";
+            label9.Text = "Кол-во детей";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(35, 411);
+            label10.Location = new Point(153, 236);
             label10.Name = "label10";
             label10.Size = new Size(78, 15);
             label10.TabIndex = 0;
@@ -145,105 +150,142 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(35, 375);
+            label11.Location = new Point(153, 183);
             label11.Name = "label11";
-            label11.Size = new Size(197, 15);
+            label11.Size = new Size(80, 15);
             label11.TabIndex = 0;
-            label11.Text = "Есть ли задолжность по кварплате";
+            label11.Text = "Задолжность";
             // 
-            // textBox1
+            // textBoxNumP_KMR
             // 
-            textBox1.Location = new Point(347, 16);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            textBoxNumP_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "NumP", true));
+            textBoxNumP_KMR.Location = new Point(16, 37);
+            textBoxNumP_KMR.Name = "textBoxNumP_KMR";
+            textBoxNumP_KMR.Size = new Size(100, 23);
+            textBoxNumP_KMR.TabIndex = 1;
             // 
-            // textBox2
+            // dataServiceBindingSource_KMR
             // 
-            textBox2.Location = new Point(347, 51);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 1;
+            dataServiceBindingSource_KMR.DataSource = typeof(Lib.DataService);
             // 
-            // textBox3
+            // textBoxNumK_KMR
             // 
-            textBox3.Location = new Point(347, 87);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 1;
+            textBoxNumK_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "NumK", true));
+            textBoxNumK_KMR.Location = new Point(16, 91);
+            textBoxNumK_KMR.Name = "textBoxNumK_KMR";
+            textBoxNumK_KMR.Size = new Size(100, 23);
+            textBoxNumK_KMR.TabIndex = 1;
             // 
-            // textBox4
+            // textBoxTotalArea_KMR
             // 
-            textBox4.Location = new Point(347, 126);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 1;
+            textBoxTotalArea_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "TotalArea", true));
+            textBoxTotalArea_KMR.Location = new Point(16, 146);
+            textBoxTotalArea_KMR.Name = "textBoxTotalArea_KMR";
+            textBoxTotalArea_KMR.Size = new Size(100, 23);
+            textBoxTotalArea_KMR.TabIndex = 1;
             // 
-            // textBox5
+            // textBoxUsableArea_KMR
             // 
-            textBox5.Location = new Point(347, 164);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 1;
+            textBoxUsableArea_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "UsableArea", true));
+            textBoxUsableArea_KMR.Location = new Point(16, 201);
+            textBoxUsableArea_KMR.Name = "textBoxUsableArea_KMR";
+            textBoxUsableArea_KMR.Size = new Size(100, 23);
+            textBoxUsableArea_KMR.TabIndex = 1;
             // 
-            // textBox6
+            // textBoxNumberOfRooms_KMR
             // 
-            textBox6.Location = new Point(347, 205);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 1;
+            textBoxNumberOfRooms_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "NumberOfRooms", true));
+            textBoxNumberOfRooms_KMR.Location = new Point(16, 254);
+            textBoxNumberOfRooms_KMR.Name = "textBoxNumberOfRooms_KMR";
+            textBoxNumberOfRooms_KMR.Size = new Size(100, 23);
+            textBoxNumberOfRooms_KMR.TabIndex = 1;
             // 
-            // textBox7
+            // textBoxSurname_KMR
             // 
-            textBox7.Location = new Point(347, 245);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 1;
+            textBoxSurname_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "Surname", true));
+            textBoxSurname_KMR.Location = new Point(14, 311);
+            textBoxSurname_KMR.Name = "textBoxSurname_KMR";
+            textBoxSurname_KMR.Size = new Size(100, 23);
+            textBoxSurname_KMR.TabIndex = 1;
             // 
-            // textBox8
+            // textBoxNumOfFamMem_KMR
             // 
-            textBox8.Location = new Point(347, 289);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 1;
+            textBoxNumOfFamMem_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "NumOfFamMem", true));
+            textBoxNumOfFamMem_KMR.Location = new Point(153, 91);
+            textBoxNumOfFamMem_KMR.Name = "textBoxNumOfFamMem_KMR";
+            textBoxNumOfFamMem_KMR.Size = new Size(100, 23);
+            textBoxNumOfFamMem_KMR.TabIndex = 1;
             // 
-            // textBox9
+            // textBoxNumOfKids_KMR
             // 
-            textBox9.Location = new Point(347, 331);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 1;
+            textBoxNumOfKids_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "NumOfKids", true));
+            textBoxNumOfKids_KMR.Location = new Point(153, 146);
+            textBoxNumOfKids_KMR.Name = "textBoxNumOfKids_KMR";
+            textBoxNumOfKids_KMR.Size = new Size(100, 23);
+            textBoxNumOfKids_KMR.TabIndex = 1;
             // 
-            // textBox10
+            // textBoxArreas_KMR
             // 
-            textBox10.Location = new Point(347, 372);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 1;
+            textBoxArreas_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "Arreas", true));
+            textBoxArreas_KMR.Location = new Point(153, 201);
+            textBoxArreas_KMR.Name = "textBoxArreas_KMR";
+            textBoxArreas_KMR.Size = new Size(100, 23);
+            textBoxArreas_KMR.TabIndex = 1;
             // 
-            // textBox11
+            // textBoxNote_KMR
             // 
-            textBox11.Location = new Point(347, 408);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 1;
+            textBoxNote_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "Note", true));
+            textBoxNote_KMR.Location = new Point(153, 254);
+            textBoxNote_KMR.Name = "textBoxNote_KMR";
+            textBoxNote_KMR.Size = new Size(100, 23);
+            textBoxNote_KMR.TabIndex = 1;
+            // 
+            // buttonOK_KMR
+            // 
+            buttonOK_KMR.Location = new Point(204, 338);
+            buttonOK_KMR.Name = "buttonOK_KMR";
+            buttonOK_KMR.Size = new Size(75, 23);
+            buttonOK_KMR.TabIndex = 3;
+            buttonOK_KMR.Text = "OK";
+            buttonOK_KMR.UseVisualStyleBackColor = true;
+            buttonOK_KMR.Click += buttonOK_KMR_Click;
+            // 
+            // buttonCancel_KMR
+            // 
+            buttonCancel_KMR.Location = new Point(289, 338);
+            buttonCancel_KMR.Name = "buttonCancel_KMR";
+            buttonCancel_KMR.Size = new Size(75, 23);
+            buttonCancel_KMR.TabIndex = 4;
+            buttonCancel_KMR.Text = "Отмена";
+            buttonCancel_KMR.UseVisualStyleBackColor = true;
+            buttonCancel_KMR.Click += buttonCancel_KMR_Click;
+            // 
+            // textBoxTimeReg_KMR
+            // 
+            textBoxTimeReg_KMR.DataBindings.Add(new Binding("Text", dataServiceBindingSource_KMR, "TimeReg", true));
+            textBoxTimeReg_KMR.Location = new Point(153, 37);
+            textBoxTimeReg_KMR.Name = "textBoxTimeReg_KMR";
+            textBoxTimeReg_KMR.Size = new Size(100, 23);
+            textBoxTimeReg_KMR.TabIndex = 5;
             // 
             // FormRed
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(822, 450);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(376, 373);
+            Controls.Add(textBoxTimeReg_KMR);
+            Controls.Add(buttonCancel_KMR);
+            Controls.Add(buttonOK_KMR);
+            Controls.Add(textBoxSurname_KMR);
+            Controls.Add(textBoxNote_KMR);
+            Controls.Add(textBoxArreas_KMR);
+            Controls.Add(textBoxNumberOfRooms_KMR);
+            Controls.Add(textBoxNumOfKids_KMR);
+            Controls.Add(textBoxUsableArea_KMR);
+            Controls.Add(textBoxTotalArea_KMR);
+            Controls.Add(textBoxNumOfFamMem_KMR);
+            Controls.Add(textBoxNumK_KMR);
+            Controls.Add(textBoxNumP_KMR);
             Controls.Add(label5);
             Controls.Add(label7);
             Controls.Add(label11);
@@ -255,8 +297,14 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormRed";
-            Text = "Изменение данные";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Редактор";
+            Load += FormRed_Load;
+            ((System.ComponentModel.ISupportInitialize)dataServiceBindingSource_KMR).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -274,16 +322,19 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
+        private TextBox textBoxNumP_KMR;
+        private TextBox textBoxNumK_KMR;
+        private TextBox textBoxTotalArea_KMR;
+        private TextBox textBoxUsableArea_KMR;
+        private TextBox textBoxNumberOfRooms_KMR;
+        private TextBox textBoxSurname_KMR;
+        private TextBox textBoxNumOfFamMem_KMR;
+        private TextBox textBoxNumOfKids_KMR;
+        private TextBox textBoxArreas_KMR;
+        private TextBox textBoxNote_KMR;
+        private Button buttonOK_KMR;
+        private Button buttonCancel_KMR;
+        private TextBox textBoxTimeReg_KMR;
+        private BindingSource dataServiceBindingSource_KMR;
     }
 }
