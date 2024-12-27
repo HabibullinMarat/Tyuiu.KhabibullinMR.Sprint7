@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelTop_KMR = new Panel();
+            buttonAbout_KMR = new Button();
+            buttonHelp_KMR = new Button();
             textBoxSearch_KMR = new TextBox();
             labelSearch_KMR = new Label();
             buttonSave_KMR = new Button();
@@ -77,6 +79,8 @@
             // 
             // panelTop_KMR
             // 
+            panelTop_KMR.Controls.Add(buttonAbout_KMR);
+            panelTop_KMR.Controls.Add(buttonHelp_KMR);
             panelTop_KMR.Controls.Add(textBoxSearch_KMR);
             panelTop_KMR.Controls.Add(labelSearch_KMR);
             panelTop_KMR.Controls.Add(buttonSave_KMR);
@@ -86,6 +90,30 @@
             panelTop_KMR.Name = "panelTop_KMR";
             panelTop_KMR.Size = new Size(1284, 52);
             panelTop_KMR.TabIndex = 0;
+            // 
+            // buttonAbout_KMR
+            // 
+            buttonAbout_KMR.BackColor = Color.White;
+            buttonAbout_KMR.FlatStyle = FlatStyle.Flat;
+            buttonAbout_KMR.Image = (Image)resources.GetObject("buttonAbout_KMR.Image");
+            buttonAbout_KMR.Location = new Point(1151, 7);
+            buttonAbout_KMR.Name = "buttonAbout_KMR";
+            buttonAbout_KMR.Size = new Size(53, 45);
+            buttonAbout_KMR.TabIndex = 3;
+            buttonAbout_KMR.UseVisualStyleBackColor = false;
+            buttonAbout_KMR.Click += buttonAbout_KMR_Click;
+            // 
+            // buttonHelp_KMR
+            // 
+            buttonHelp_KMR.BackColor = Color.White;
+            buttonHelp_KMR.FlatStyle = FlatStyle.Flat;
+            buttonHelp_KMR.Image = (Image)resources.GetObject("buttonHelp_KMR.Image");
+            buttonHelp_KMR.Location = new Point(1219, 7);
+            buttonHelp_KMR.Name = "buttonHelp_KMR";
+            buttonHelp_KMR.Size = new Size(53, 45);
+            buttonHelp_KMR.TabIndex = 3;
+            buttonHelp_KMR.UseVisualStyleBackColor = false;
+            buttonHelp_KMR.Click += buttonHelp_KMR_Click;
             // 
             // textBoxSearch_KMR
             // 
@@ -491,5 +519,7 @@
         private Button buttonAdd_KMR;
         private Label labelNumPod_KMR;
         private TextBox textBoxTimeReg_KMR;
+        private Button buttonHelp_KMR;
+        private Button buttonAbout_KMR;
     }
 }

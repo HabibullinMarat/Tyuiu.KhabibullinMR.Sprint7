@@ -8,6 +8,8 @@ namespace Tyuiu.KhabibullinMR.Sprint7.Project.V7.Test
         [TestMethod]
         public void TestMethod1()
         {
+            DataService ds = new DataService();
+            Assert.AreEqual(ds, ds);
         }
     }
 }

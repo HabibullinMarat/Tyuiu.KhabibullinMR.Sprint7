@@ -351,5 +351,16 @@ namespace Tyuiu.KhabibullinMR.Sprint7.Project.V7
         {
             RefreshDataGridView();
         }
+
+        private void buttonHelp_KMR_Click(object sender, EventArgs e)
+        {
+            FormHelp formHelp = new FormHelp();
+            formHelp.ShowDialog();
+        }
+        private void buttonAbout_KMR_Click(Object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
     }
 }
